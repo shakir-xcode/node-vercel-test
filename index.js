@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = 4000;
 
-
+/*
 const allowCors = fn => async (req, res) => {
   res.setHeader('Access-Control-Allow-Credentials', true)
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -23,14 +23,16 @@ const allowCors = fn => async (req, res) => {
 const handler = (req, res, msg) => {
     res.status(200).json(msg);
 }
+
+*/
 // -------------------------------------------------
 
 app.get("/home", (req, res) => {
-  handler(req, res, "Welcome, your app is working well")
+  res.status(200).json("Welcome, your app is working well")
 });
 
 app.get("/", (req, res) => {
-  handler(req, res,"Welcome to zero degree coder.");
+ // handler(req, res,"Welcome to zero degree coder.");
 });
 
 app.listen(PORT, () => {
