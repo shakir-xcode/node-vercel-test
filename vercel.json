@@ -8,8 +8,13 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/handler.js", // Or your actual API handler file
+      "src": "/(.*)",
+      "dest": "index.js" // Replace with your actual API handler file
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
